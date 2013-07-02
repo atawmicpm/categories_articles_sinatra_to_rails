@@ -1,0 +1,16 @@
+<h1><%= @article.category.name %></h1>
+
+<h3><%= @article.title %></h3>
+
+<ul class="tags-list">
+<% @article.tags.each do |tag| %>
+
+	<li>
+		<%= tag.name %>
+	</li>
+
+<% end %>
+</ul>
+
+<hr>
+<p><%= @article.description %></p>
