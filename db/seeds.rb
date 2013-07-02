@@ -23,7 +23,6 @@ def parse_csv(file)
 	csv = CSV.open(file, :col_sep => "\t")
 
 	csv.each do |row|
-		scrub_category(row[3])
 		p category = Category.find_or_create_by(name: scrub_category(row[3]))
 
 		article = Article.create(
